@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://moonshine-capital-partners.vercel.app/sitemap.html
