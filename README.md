@@ -1,4 +1,4 @@
-# Moonshine Capital Referral OS
+# Moonshine Capital Partners
 
 ## How to Test Locally
 Run a local static server:
