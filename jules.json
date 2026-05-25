@@ -1,0 +1,81 @@
+{
+  "project": "moonshine-capital-partners",
+  "productName": "Moonshine Capital Referral OS",
+  "repository": "https://github.com/JFeimster/moonshine-capital-partners",
+  "liveUrl": "https://moonshine-capital-partners.vercel.app/",
+  "defaultBranch": "main",
+  "projectType": "static-html-css-js",
+  "deployment": "vercel-static",
+  "constraints": {
+    "noBackend": true,
+    "noAuth": true,
+    "noDatabase": true,
+    "noPaidDependencies": true,
+    "preserveVisualStyle": true,
+    "avoidFinancialGuarantees": true
+  },
+  "importantFolders": [
+    "assets/css",
+    "assets/js",
+    "data",
+    "partners",
+    "brokers",
+    "affiliates",
+    "funding",
+    "tools",
+    "verticals",
+    "compliance"
+  ],
+  "importantFiles": [
+    "index.html",
+    "style.css",
+    "script.js",
+    "data/config.js",
+    "data/partners.js",
+    "data/funding-types.js",
+    "data/tools.js",
+    "data/verticals.js",
+    "data/compliance-rules.js",
+    "assets/js/tracking.js",
+    "assets/js/scorecard.js",
+    "assets/js/funding-directory.js",
+    "assets/js/link-builder.js",
+    "assets/js/widget-builder.js",
+    "assets/js/forms.js",
+    "assets/js/core.js"
+  ],
+  "qaCommands": {
+    "localServer": "python -m http.server 5500",
+    "jsSyntaxCheck": "Get-ChildItem assets\\js\\*.js | ForEach-Object { node --check $_.FullName }",
+    "missingIndexCheck": "Get-ChildItem -Recurse -Directory partners,brokers,affiliates,funding,tools,verticals,compliance | ForEach-Object { if (!(Test-Path \"$($_.FullName)\\index.html\")) { $_.FullName } }",
+    "riskyLanguageScan": "Select-String -Path *.html,partners\\*\\index.html,brokers\\*\\index.html,affiliates\\*\\index.html,funding\\*\\index.html,tools\\*\\index.html,verticals\\*\\index.html,compliance\\*\\index.html,assets\\js\\*.js,data\\*.js -Pattern \"guaranteed approval|guaranteed funding|pre-approved|guaranteed commissions|guaranteed income|get funded today|no credit impact\" -CaseSensitive:$false"
+  },
+  "trackingParams": [
+    "ref",
+    "partner",
+    "partner_name",
+    "partner_type",
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_content"
+  ],
+  "safeLanguage": [
+    "possible fit",
+    "review needed",
+    "route for review",
+    "funding-readiness guidance",
+    "options depend on eligibility and underwriting"
+  ],
+  "avoidLanguage": [
+    "approved",
+    "qualified",
+    "pre-approved",
+    "guaranteed",
+    "get funded today",
+    "no credit impact",
+    "guaranteed commissions",
+    "guaranteed income"
+  ],
+  "nextRecommendedTask": "Post-route QA and deployment hygiene"
+}
