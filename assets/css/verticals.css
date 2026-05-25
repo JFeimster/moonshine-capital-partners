@@ -1,0 +1,15 @@
+/* Verticals route styles */
+.vertical-shell {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+.info-list {
+  display: grid;
+  gap: 8px;
+}
+.info-list li {
+  list-style: none;
+  border-left: 4px solid var(--vivid-pink);
+  padding-left: 10px;
+}

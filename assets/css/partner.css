@@ -1,0 +1,45 @@
+/* Partner route styles */
+.partner-route-hero,
+.static-page-hero {
+  padding: 80px 0 40px;
+}
+.trust-strip-compact {
+  border: var(--border-thick);
+  background: var(--bg-card);
+  padding: 14px;
+  margin: 18px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.partner-cta-row,
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+.mobile-sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  border-top: var(--border-thick);
+  background: #000;
+  z-index: 120;
+}
+.mobile-sticky-cta .btn {
+  flex: 1;
+  padding: 10px;
+}
+@media (min-width: 961px) {
+  .mobile-sticky-cta {
+    display: none;
+  }
+}
+.faq-trigger[aria-expanded="true"] {
+  background: var(--vivid-yellow);
+  color: #000;
+}

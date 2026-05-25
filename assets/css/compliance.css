@@ -1,0 +1,23 @@
+/* Compliance route styles */
+.disclaimer-box {
+  border: var(--border-thick);
+  background: var(--bg-card);
+  padding: 18px;
+  box-shadow: var(--neo-shadow-pink);
+}
+.claim-matrix {
+  width: 100%;
+  border-collapse: collapse;
+  border: var(--border-thick);
+}
+.claim-matrix th,
+.claim-matrix td {
+  border: 2px solid #fff;
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+.claim-matrix th {
+  background: var(--vivid-yellow);
+  color: #000;
+}

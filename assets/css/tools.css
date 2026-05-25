@@ -1,0 +1,33 @@
+/* Tools route styles */
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+.tool-card {
+  border: var(--border-thick);
+  background: var(--bg-card);
+  padding: 18px;
+  box-shadow: var(--neo-shadow-yellow);
+}
+.form-shell {
+  border: var(--border-thick);
+  background: var(--bg-card);
+  padding: 18px;
+  box-shadow: var(--neo-shadow-white);
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.output-box {
+  border: var(--border-thick);
+  background: #000;
+  color: var(--vivid-cyan);
+  padding: 12px;
+  font-family: monospace;
+  font-size: 12px;
+  white-space: pre-wrap;
+  word-break: break-all;
+}

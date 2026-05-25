@@ -1,0 +1,19 @@
+/* Homepage route-specific add-ons */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  background: var(--vivid-yellow);
+  color: #000;
+  border: var(--border-thick);
+  padding: 8px 12px;
+  z-index: 999;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.skip-link:focus {
+  left: 8px;
+}
+main {
+  min-height: 60vh;
+}

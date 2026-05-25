@@ -1,0 +1,23 @@
+/* Funding route styles */
+.funding-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+.funding-card {
+  border: var(--border-thick);
+  background: var(--bg-card);
+  padding: 18px;
+  box-shadow: var(--neo-shadow-cyan);
+}
+.funding-card h3 {
+  margin-bottom: 10px;
+}
+.definition-list {
+  display: grid;
+  gap: 8px;
+}
+.definition-list div {
+  border-left: 4px solid var(--vivid-cyan);
+  padding-left: 10px;
+}
