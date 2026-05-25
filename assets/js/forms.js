@@ -1,4 +1,20 @@
 (function () {
+  function bindFaqAccordions() {
+    document.querySelectorAll(".faq-trigger").forEach((button) => {
+      if (button.dataset.bound === "1") return;
+      button.dataset.bound = "1";
+      const panelId = button.getAttribute("aria-controls");
+      const panel = panelId ? document.getElementById(panelId) : button.nextElementSibling;
+      button.addEventListener("click", () => {
+        const expanded = button.getAttribute("aria-expanded") === "true";
+        button.setAttribute("aria-expanded", expanded ? "false" : "true");
+        if (panel) {
+          panel.style.maxHeight = expanded ? null : `${panel.scrollHeight}px`;
+        }
+      });
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("form[data-static-submit]").forEach((form) => {
       form.addEventListener("submit", (event) => {
@@ -9,5 +25,6 @@
         }
       });
     });
+    bindFaqAccordions();
   });
 })();

@@ -4,6 +4,9 @@
     if (!container) return;
     const list = (window.fundingTypes || []).filter((item) => {
       if (filter === "all") return true;
+      if (filter === "asset") {
+        return ["real-estate", "equipment", "marketplace"].includes(item.cardSlug);
+      }
       return item.cardSlug === filter || item.slug === filter;
     });
 

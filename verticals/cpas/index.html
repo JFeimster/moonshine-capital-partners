@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPA Partners | Moonshine Capital Verticals</title>
+  <meta name="description" content="CPA partner vertical page with compliant referral flow and co-branded funding education tools.">
+  <meta property="og:title" content="Moonshine Capital for CPAs">
+  <meta property="og:description" content="Help business clients find smarter funding paths without becoming a lender.">
+  <link rel="canonical" href="https://moonshine-capital-partners.vercel.app/verticals/cpas/">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/verticals.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="sticky-header">
+    <div class="container header-inner">
+      <div class="logo-container"><div class="logo-symbol">M</div><div class="logo-text">MOONSHINE<span>CAPITAL</span></div></div>
+      <nav class="header-nav" aria-label="Main navigation">
+        <a class="nav-link" href="/" data-track-url data-utm-content="vertical-home">Home</a>
+        <a class="nav-link active" href="/verticals/cpas/" data-track-url data-utm-content="vertical-cpas">CPAs</a>
+        <a class="nav-link" href="/partners/apply/" data-track-url data-utm-content="vertical-apply">Apply</a>
+        <a class="nav-link" href="/compliance/" data-track-url data-utm-content="vertical-compliance">Compliance</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="section-shell">
+    <section class="container">
+      <span class="badge badge-gold">CPA Partner Vertical</span>
+      <h1>Help Business Clients Find Smarter Funding Paths Without Becoming a Lender</h1>
+      <p>Educate clients with readiness tools, compliance-safe scripts, and clear referral flow routing.</p>
+    </section>
+
+    <section class="container section-shell vertical-shell">
+      <article class="card">
+        <h2>Why This Niche Needs Funding Education</h2>
+        <ul class="info-list">
+          <li>Clients often ask for funding direction during tax and cash flow planning cycles.</li>
+          <li>Readiness tools reduce poor-fit applications and improve documentation quality.</li>
+          <li>Compliance language protects trust and avoids misleading claims.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2>Common Client Scenarios</h2>
+        <ul class="info-list">
+          <li>Tax season payment pressure and short-term liquidity gaps.</li>
+          <li>Growth planning requiring structured working capital.</li>
+          <li>Debt cleanup before expansion decisions.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="container section-shell">
+      <h2>Moonshine Tools You Can Share</h2>
+      <div class="grid-2">
+        <article class="card"><h3>Funding Readiness Scorecard</h3><a class="btn btn-secondary" href="/tools/funding-readiness-scorecard/" data-track-url data-utm-content="vertical-scorecard">Open Tool</a></article>
+        <article class="card"><h3>Document Checklist</h3><a class="btn btn-secondary" href="/tools/document-checklist/" data-track-url data-utm-content="vertical-checklist">Open Checklist</a></article>
+      </div>
+    </section>
+
+    <section class="container section-shell">
+      <h2>Sample Co-Branded Client Page</h2>
+      <p>Preview: <a href="/partners/marcus-vance/" data-track-url data-utm-content="vertical-preview">/partners/marcus-vance/</a></p>
+      <h2>Referral Flow</h2>
+      <ol>
+        <li>Share readiness tool with attribution link.</li>
+        <li>Client reviews funding path education.</li>
+        <li>Client submits tracked get-funded request.</li>
+      </ol>
+      <a class="btn btn-primary" href="/partners/apply/" data-track-url data-utm-content="vertical-apply-cta">Apply as CPA Partner</a>
+    </section>
+
+    <section class="container section-shell">
+      <h2>FAQ</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="cpas-faq-1">Do CPAs make lending decisions?</button>
+          <div class="faq-panel" id="cpas-faq-1"><div class="faq-content"><p>No. CPAs provide educational routing and referral support only.</p></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-safe">
+      <p id="vertical-disclaimer"></p>
+    </div>
+  </footer>
+
+  <script src="/data/config.js"></script>
+  <script src="/assets/js/tracking.js"></script>
+  <script src="/assets/js/forms.js"></script>
+  <script>document.getElementById('vertical-disclaimer').textContent = (window.moonshineConfig || {}).requiredFundingDisclaimer || '';</script>
+</body>
+</html>

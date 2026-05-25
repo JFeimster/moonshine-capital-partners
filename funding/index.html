@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moonshine Capital Funding Directory</title>
+  <meta name="description" content="Explore Moonshine Capital funding families with best fit notes, use cases, readiness markers, and compliance-safe education.">
+  <meta property="og:title" content="Moonshine Capital Funding Directory">
+  <meta property="og:description" content="Static funding pathway directory with referral attribution preserved across routes.">
+  <link rel="canonical" href="https://moonshine-capital-partners.vercel.app/funding/">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/funding.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="sticky-header">
+    <div class="container header-inner">
+      <div class="logo-container"><div class="logo-symbol">M</div><div class="logo-text">MOONSHINE<span>CAPITAL</span></div></div>
+      <nav class="header-nav" aria-label="Main navigation">
+        <a class="nav-link" href="/" data-track-url data-utm-content="funding-home">Home</a>
+        <a class="nav-link" href="/partners/jane-smith/" data-track-url data-utm-content="funding-partner">Partner Page</a>
+        <a class="nav-link active" href="/funding/" data-track-url data-utm-content="funding-directory">Funding</a>
+        <a class="nav-link" href="/tools/funding-readiness-scorecard/" data-track-url data-utm-content="funding-scorecard">Scorecard</a>
+        <a class="nav-link" href="/compliance/" data-track-url data-utm-content="funding-compliance">Compliance</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="section-shell">
+    <section class="directory-hero">
+      <div class="container">
+        <h1>Explore Moonshine Capital Funding Paths</h1>
+        <p>Educational pathway guide only. Funding outcomes depend on eligibility, documentation, underwriting, and provider requirements.</p>
+        <div class="filter-pills" role="group" aria-label="Funding category filters">
+          <button class="filter-pill active-pill" onclick="filterDirectory('all', this)">All Pathways</button>
+          <button class="filter-pill" onclick="filterDirectory('startup', this)">Startup</button>
+          <button class="filter-pill" onclick="filterDirectory('working-capital', this)">Working Capital</button>
+          <button class="filter-pill" onclick="filterDirectory('lines', this)">Line Access</button>
+          <button class="filter-pill" onclick="filterDirectory('asset', this)">Asset / Real Estate</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section-shell">
+      <div class="funding-directory-grid" id="directory-cards-container"></div>
+    </section>
+
+    <section class="container section-shell">
+      <a class="btn btn-primary" href="/tools/book-call/" data-track-url data-utm-content="funding-get-funded">Get Funded</a>
+      <a class="btn btn-secondary" href="/partners/jane-smith/" data-track-url data-utm-content="funding-share">Share With a Partner</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-safe">
+      <p id="funding-disclaimer"></p>
+      <p id="referral-disclosure"></p>
+    </div>
+  </footer>
+
+  <script src="/data/config.js"></script>
+  <script src="/data/funding-types.js"></script>
+  <script src="/assets/js/tracking.js"></script>
+  <script src="/assets/js/funding-directory.js"></script>
+  <script>
+    document.getElementById('funding-disclaimer').textContent = (window.moonshineConfig || {}).requiredFundingDisclaimer || '';
+    document.getElementById('referral-disclosure').textContent = (window.moonshineConfig || {}).requiredReferralDisclosure || '';
+  </script>
+</body>
+</html>

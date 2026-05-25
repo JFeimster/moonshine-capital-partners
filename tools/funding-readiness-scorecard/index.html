@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funding Readiness Scorecard | Moonshine Capital</title>
+  <meta name="description" content="Educational readiness scorecard for business funding pathways. Static and compliance-safe.">
+  <meta property="og:title" content="Funding Readiness Scorecard">
+  <meta property="og:description" content="Check readiness markers and caution flags before requesting funding path review.">
+  <link rel="canonical" href="https://moonshine-capital-partners.vercel.app/tools/funding-readiness-scorecard/">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/tools.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="sticky-header">
+    <div class="container header-inner">
+      <div class="logo-container"><div class="logo-symbol">M</div><div class="logo-text">MOONSHINE<span>CAPITAL</span></div></div>
+      <nav class="header-nav" aria-label="Main navigation">
+        <a class="nav-link" href="/" data-track-url data-utm-content="scorecard-home">Home</a>
+        <a class="nav-link" href="/funding/" data-track-url data-utm-content="scorecard-funding">Funding</a>
+        <a class="nav-link active" href="/tools/funding-readiness-scorecard/" data-track-url data-utm-content="scorecard-tool">Scorecard</a>
+        <a class="nav-link" href="/tools/link-builder/" data-track-url data-utm-content="scorecard-link-builder">Link Builder</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="section-shell">
+    <section class="container">
+      <h1>Funding Readiness Scorecard</h1>
+      <p>This scorecard is for educational and readiness guidance only. It is not an approval, offer of credit, commitment to lend, or guarantee of funding.</p>
+
+      <form id="standalone-scorecard-form" class="form-shell">
+        <div class="form-grid">
+          <div class="form-group"><label class="form-label" for="businessType">Business Type</label><input class="form-input" id="businessType" name="businessType" type="text" placeholder="LLC, Corp, Sole Proprietor"></div>
+          <div class="form-group"><label class="form-label" for="desiredFundingAmount">Desired Funding Amount</label><input class="form-input" id="desiredFundingAmount" name="desiredFundingAmount" type="text" placeholder="$50,000"></div>
+          <div class="form-group"><label class="form-label" for="monthlyRevenue">Monthly Revenue</label><select class="form-input" id="monthlyRevenue" name="monthlyRevenue"><option value="0">$0 - $2,999</option><option value="5">$3,000 - $8,499</option><option value="15">$8,500 - $14,999</option><option value="25">$15,000+</option></select></div>
+          <div class="form-group"><label class="form-label" for="timeInBusiness">Time in Business</label><select class="form-input" id="timeInBusiness" name="timeInBusiness"><option value="0">Not launched</option><option value="5">0 - 5 months</option><option value="12">6 - 11 months</option><option value="20">12+ months</option></select></div>
+          <div class="form-group"><label class="form-label" for="creditTier">Credit Tier</label><select class="form-input" id="creditTier" name="creditTier"><option value="2">Below 580</option><option value="10">580 - 649</option><option value="16">650 - 699</option><option value="20">700+</option></select></div>
+          <div class="form-group"><label class="form-label" for="bankActivity">Bank Activity</label><select class="form-input" id="bankActivity" name="bankActivity"><option value="0">No business bank activity</option><option value="5">Inconsistent deposits</option><option value="15">Consistent deposits</option></select></div>
+          <div class="form-group"><label class="form-label" for="businessStructure">Business Structure</label><select class="form-input" id="businessStructure" name="businessStructure"><option value="2">Sole Proprietor</option><option value="5">LLC/Corp with weak setup</option><option value="10">LLC/Corp with strong setup</option></select></div>
+          <div class="form-group"><label class="form-label" for="fundingPurpose">Funding Purpose</label><select class="form-input" id="fundingPurpose" name="fundingPurpose"><option value="6">Startup launch</option><option value="10">Working capital</option><option value="8">Equipment / fleet</option><option value="10">Real estate</option></select></div>
+        </div>
+
+        <h2 style="margin-top:18px;">Red Flags</h2>
+        <div class="form-grid">
+          <label><input type="checkbox" name="openBankruptcy"> Open bankruptcy</label>
+          <label><input type="checkbox" name="recentTaxLien"> Recent tax lien</label>
+          <label><input type="checkbox" name="recentMissedPayments"> Recent missed payments</label>
+          <label><input type="checkbox" name="recentNsfs"> Recent NSFs / overdrafts</label>
+          <label><input type="checkbox" name="newBusinessAccount"> Recently opened business bank account</label>
+          <label><input type="checkbox" name="existingMca"> Existing MCA / daily advance</label>
+          <label><input type="checkbox" name="suspendedMarketplace"> Suspended marketplace account</label>
+          <label><input type="checkbox" name="noCurrentRevenue"> No current revenue</label>
+        </div>
+
+        <div class="cta-row" style="margin-top:16px;">
+          <button class="btn btn-primary" type="submit">Calculate Score</button>
+          <a class="btn btn-secondary" href="/tools/book-call/" data-track-url data-utm-content="scorecard-get-funded">Get Funded</a>
+        </div>
+      </form>
+
+      <section class="card" style="margin-top:20px;">
+        <h2>Results</h2>
+        <p><strong>Score:</strong> <span id="standalone-score">-</span></p>
+        <p><strong>Tier:</strong> <span id="standalone-tier">-</span></p>
+        <p><strong>Recommended Funding Families:</strong> <span id="standalone-families">-</span></p>
+        <p><strong>Risks:</strong> <span id="standalone-risks">-</span></p>
+        <p><strong>Strengths:</strong> <span id="standalone-strengths">-</span></p>
+        <p><strong>Next Steps:</strong> <span id="standalone-next">-</span></p>
+        <p id="standalone-disclaimer"></p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-safe"><p id="funding-disclaimer"></p></div></footer>
+
+  <script src="/data/config.js"></script>
+  <script src="/assets/js/tracking.js"></script>
+  <script src="/assets/js/scorecard.js"></script>
+  <script>document.getElementById('funding-disclaimer').textContent = (window.moonshineConfig || {}).requiredFundingDisclaimer || '';</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compliance Center | Moonshine Capital</title>
+  <meta name="description" content="Compliance-safe referral language, disclosures, forbidden claims matrix, and partner scripts for Moonshine Capital routes.">
+  <meta property="og:title" content="Moonshine Capital Compliance Center">
+  <meta property="og:description" content="Required referral disclosures, funding disclaimers, and safe marketing language.">
+  <link rel="canonical" href="https://moonshine-capital-partners.vercel.app/compliance/">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/compliance.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="sticky-header"><div class="container header-inner"><div class="logo-container"><div class="logo-symbol">M</div><div class="logo-text">MOONSHINE<span>CAPITAL</span></div></div></div></header>
+
+  <main id="main-content" class="section-shell">
+    <section class="container">
+      <h1>Compliance Center</h1>
+      <p>Required disclosures, safe marketing language, and forbidden-claims guidance for partner, affiliate, and broker routes.</p>
+    </section>
+
+    <section class="container section-shell grid-2">
+      <article class="disclaimer-box">
+        <h2>Required Referral Disclosure</h2>
+        <p id="required-referral"></p>
+      </article>
+      <article class="disclaimer-box">
+        <h2>Required Funding Disclaimer</h2>
+        <p id="required-funding"></p>
+      </article>
+    </section>
+
+    <section class="container section-shell">
+      <h2>Forbidden Claims Matrix</h2>
+      <table class="claim-matrix">
+        <thead><tr><th>Do Not Say</th><th>Say Instead</th></tr></thead>
+        <tbody id="claims-body"></tbody>
+      </table>
+    </section>
+
+    <section class="container section-shell">
+      <h2>Approved Script Style</h2>
+      <div class="card">
+        <p>Use educational language: "Funding options depend on eligibility, documentation, underwriting, and provider requirements."</p>
+        <p>Avoid claim language like "approved", "guaranteed", "pre-approved", or "no credit impact".</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="/data/config.js"></script>
+  <script src="/data/compliance-rules.js"></script>
+  <script src="/assets/js/tracking.js"></script>
+  <script>
+    document.getElementById('required-referral').textContent = (window.moonshineConfig || {}).requiredReferralDisclosure || '';
+    document.getElementById('required-funding').textContent = (window.moonshineConfig || {}).requiredFundingDisclaimer || '';
+    const rules = (window.complianceRules || {}).forbiddenClaims || [];
+    document.getElementById('claims-body').innerHTML = rules.map((row) => `<tr><td>${row.doNotSay}</td><td>${row.sayInstead}</td></tr>`).join('');
+  </script>
+</body>
+</html>

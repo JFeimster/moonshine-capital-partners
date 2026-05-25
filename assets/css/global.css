@@ -1318,3 +1318,19 @@
   border-top: var(--border-thick);
   padding-top: 20px;
 }
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  background: var(--vivid-yellow);
+  color: #000;
+  border: var(--border-thick);
+  padding: 8px 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 1000;
+}
+.skip-link:focus {
+  left: 8px;
+}

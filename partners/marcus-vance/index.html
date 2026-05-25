@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moonshine Capital x Marcus Vance | Partner Lead Hub</title>
+  <meta name="description" content="Marcus Vance and Moonshine Capital co-branded funding readiness page with tracked referral attribution and educational capital pathways.">
+  <meta property="og:title" content="Moonshine Capital x Marcus Vance">
+  <meta property="og:description" content="See what funding options your business may be ready for with Marcus Vance's Moonshine Capital lead hub.">
+  <link rel="canonical" href="https://moonshine-capital-partners.vercel.app/partners/marcus-vance/">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/partner.css">
+  <link rel="stylesheet" href="/assets/css/funding.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="sticky-header">
+    <div class="container header-inner">
+      <div class="logo-container"><div class="logo-symbol">M</div><div class="logo-text">MOONSHINE<span>CAPITAL</span></div></div>
+      <nav class="header-nav" aria-label="Main navigation">
+        <a class="nav-link" href="/" data-track-url data-utm-content="partner-home">Home</a>
+        <a class="nav-link active" href="/partners/marcus-vance/" data-track-url data-utm-content="partner-page">Marcus Vance</a>
+        <a class="nav-link" href="/funding/" data-track-url data-utm-content="partner-funding">Funding Paths</a>
+        <a class="nav-link" href="/tools/funding-readiness-scorecard/" data-track-url data-utm-content="partner-tools">Scorecard</a>
+        <a class="nav-link" href="/compliance/" data-track-url data-utm-content="partner-compliance">Compliance</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="section-shell">
+    <section class="partner-route-hero">
+      <div class="container">
+        <span class="badge badge-gold">Moonshine Capital x Vance Tax & Wealth Alliance</span>
+        <div class="trust-strip-compact">Referred by Marcus Vance</div>
+        <h1>See What Funding Options Your Business May Be Ready For</h1>
+        <p>Marcus Vance partnered with Moonshine Capital to help business owners take a clearer, more organized next step toward funding readiness.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" id="marcus-get-funded" href="/tools/book-call/" data-track-url data-utm-content="get-funded">Get Funded</a>
+          <a class="btn btn-secondary" href="/tools/funding-readiness-scorecard/" data-track-url data-utm-content="scorecard">Check Funding Readiness</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section-shell">
+      <h2>Funding Readiness Scorecard</h2>
+      <div class="card">
+        <p>Marcus partner mode uses embedded scorecard routing when preferred.</p>
+        <pre class="output-box" id="marcus-embed-url">Generating embed URL...</pre>
+      </div>
+    </section>
+
+    <section class="container section-shell">
+      <h2>Funding Paths Preview</h2>
+      <div class="funding-grid" id="marcus-funding-preview"></div>
+    </section>
+
+    <section class="container section-shell">
+      <h2>Referral Attribution Block</h2>
+      <div class="card">
+        <pre class="output-box" id="marcus-attribution">Awaiting tracking context...</pre>
+      </div>
+    </section>
+
+    <section class="container section-shell">
+      <h2>Tally / Get Funded</h2>
+      <a class="btn btn-primary" id="marcus-tally-cta" href="/tools/book-call/" data-track-url data-utm-content="tally-intake">Get Funded</a>
+    </section>
+
+    <section class="container section-shell">
+      <h2>Partner Note</h2>
+      <blockquote class="card">"Marcus creates strategic liquidity routes for established corporate portfolios."</blockquote>
+    </section>
+
+    <section class="container section-shell">
+      <h2>FAQ</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="mv-faq-1">Is this an approval?</button>
+          <div class="faq-panel" id="mv-faq-1"><div class="faq-content"><p>No. This page provides readiness education and referral routing only.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-trigger" aria-expanded="false" aria-controls="mv-faq-2">Does partner referral change lender decisions?</button>
+          <div class="faq-panel" id="mv-faq-2"><div class="faq-content"><p>No. Underwriting and provider requirements remain independent.</p></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="mobile-sticky-cta" aria-label="Mobile actions">
+    <a class="btn btn-primary" href="/tools/book-call/" data-track-url data-utm-content="sticky-get-funded">Get Funded</a>
+    <a class="btn btn-secondary" href="/tools/funding-readiness-scorecard/" data-track-url data-utm-content="sticky-scorecard">Check Funding Readiness</a>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-safe">
+      <p id="funding-disclaimer"></p>
+      <p id="referral-disclosure"></p>
+    </div>
+  </footer>
+
+  <script src="/data/config.js"></script>
+  <script src="/data/partners.js"></script>
+  <script src="/data/funding-types.js"></script>
+  <script src="/assets/js/tracking.js"></script>
+  <script src="/assets/js/forms.js"></script>
+  <script>
+    (function () {
+      const partner = (window.partners || []).find((p) => p.partnerSlug === "marcus-vance");
+      if (partner && window.storeAttribution) {
+        window.storeAttribution({
+          ref: partner.partnerReferralCode,
+          partner: partner.partnerSlug,
+          partner_name: partner.partnerName,
+          partner_type: partner.partnerType,
+          utm_source: "partner",
+          utm_medium: "referral",
+          utm_campaign: partner.partnerSlug,
+          utm_content: "partner-page"
+        });
+      }
+      const stored = window.getStoredAttribution ? window.getStoredAttribution() : {};
+      document.getElementById("marcus-attribution").textContent = JSON.stringify(stored, null, 2);
+      if (partner && window.buildTallyUrl) {
+        document.getElementById("marcus-tally-cta").href = window.buildTallyUrl(partner, "get-funded");
+        document.getElementById("marcus-get-funded").href = window.buildTallyUrl(partner, "hero-get-funded");
+      }
+      if (partner && window.buildToolEmbedUrl) {
+        document.getElementById("marcus-embed-url").textContent = window.buildToolEmbedUrl((window.moonshineConfig || {}).scorecardEmbedUrl || "https://funding-quiz.vercel.app/", partner, "scorecard-embed");
+      }
+      document.getElementById("marcus-funding-preview").innerHTML = (window.fundingTypes || []).slice(0, 3).map((item) => `
+        <article class="funding-card">
+          <h3>${item.publicName}</h3>
+          <p>${item.bestFit}</p>
+          <a class="btn btn-secondary" href="/funding/${item.slug}/" data-track-url data-utm-content="partner-funding-preview">View Path</a>
+        </article>
+      `).join("");
+      document.getElementById("funding-disclaimer").textContent = (window.moonshineConfig || {}).requiredFundingDisclaimer || "";
+      document.getElementById("referral-disclosure").textContent = (window.moonshineConfig || {}).requiredReferralDisclosure || "";
+      window.appendTrackingToLinks && window.appendTrackingToLinks();
+    })();
+  </script>
+</body>
+</html>

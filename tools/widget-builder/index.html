@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Widget Builder | Moonshine Capital</title>
+  <meta name="description" content="Generate static iframe embed code with referral tracking for Moonshine Capital tools.">
+  <meta property="og:title" content="Moonshine Capital Widget Builder">
+  <meta property="og:description" content="Build iframe embeds for scorecard, checklist, get-funded, and book-call routes.">
+  <link rel="canonical" href="https://moonshine-capital-partners.vercel.app/tools/widget-builder/">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/tools.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="sticky-header"><div class="container header-inner"><div class="logo-container"><div class="logo-symbol">M</div><div class="logo-text">MOONSHINE<span>CAPITAL</span></div></div></div></header>
+
+  <main id="main-content" class="section-shell">
+    <section class="container">
+      <h1>Widget Builder</h1>
+      <p>Generate copy-paste iframe code with partner attribution parameters.</p>
+      <form id="widget-builder-form" class="form-shell">
+        <div class="form-grid">
+          <div class="form-group"><label class="form-label" for="partnerSlug">Partner Slug</label><input class="form-input" id="partnerSlug" name="partnerSlug" value="jane-smith"></div>
+          <div class="form-group"><label class="form-label" for="referralCode">Referral Code</label><input class="form-input" id="referralCode" name="referralCode" value="JANE2026"></div>
+          <div class="form-group"><label class="form-label" for="width">Width</label><input class="form-input" id="width" name="width" value="100%"></div>
+          <div class="form-group"><label class="form-label" for="height">Height</label><input class="form-input" id="height" name="height" value="700"></div>
+          <div class="form-group"><label class="form-label" for="theme">Theme</label><input class="form-input" id="theme" name="theme" value="neo-brutalist"></div>
+          <div class="form-group"><label class="form-label" for="targetTool">Target Tool</label>
+            <select class="form-input" id="targetTool" name="targetTool">
+              <option value="scorecard">Funding Readiness Scorecard</option>
+              <option value="getFunded">Get Funded Tally Form</option>
+              <option value="bookCall">Book Call Page</option>
+              <option value="checklist">Document Checklist</option>
+            </select>
+          </div>
+        </div>
+        <div class="cta-row" style="margin-top:14px;">
+          <button class="btn btn-primary" type="submit">Generate Iframe</button>
+          <button class="btn btn-secondary" id="copy-widget-output" type="button">Copy</button>
+        </div>
+      </form>
+      <pre class="output-box" id="widget-builder-output">Generated iframe code will appear here.</pre>
+    </section>
+  </main>
+
+  <script src="/data/config.js"></script>
+  <script src="/assets/js/tracking.js"></script>
+  <script src="/assets/js/widget-builder.js"></script>
+</body>
+</html>
