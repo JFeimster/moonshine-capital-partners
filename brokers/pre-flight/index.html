@@ -24,6 +24,7 @@
           <div class="form-group"><label class="form-label" for="monthlyRevenue">Monthly Revenue Estimate</label><input class="form-input" id="monthlyRevenue" name="monthlyRevenue" type="number" value="25000"></div>
           <div class="form-group"><label class="form-label" for="timeInBusiness">Time in Business (months)</label><input class="form-input" id="timeInBusiness" name="timeInBusiness" type="number" value="18"></div>
           <div class="form-group"><label class="form-label" for="bankStatements">Bank Statements Ready?</label><select class="form-input" id="bankStatements" name="bankStatements"><option value="yes">yes</option><option value="no">no</option></select></div>
+          <div class="form-group"><label class="form-label" for="useOfFunds">Primary Use of Funds</label><select class="form-input" id="useOfFunds" name="useOfFunds"><option value="workingCapital">Working capital</option><option value="lineAccess">Line access</option><option value="equipment">Equipment</option><option value="realEstate">Real estate</option><option value="growth">Structured growth</option></select></div>
           <div class="form-group"><label class="form-label" for="existingAdvances">Existing Advances</label><select class="form-input" id="existingAdvances" name="existingAdvances"><option value="none">none</option><option value="one">one</option><option value="multiple">multiple</option></select></div>
           <div class="form-group"><label class="form-label" for="recentNsfs">Recent NSFs?</label><select class="form-input" id="recentNsfs" name="recentNsfs"><option value="no">no</option><option value="yes">yes</option></select></div>
           <div class="form-group"><label class="form-label" for="taxLiens">Tax Liens?</label><select class="form-input" id="taxLiens" name="taxLiens"><option value="no">no</option><option value="yes">yes</option></select></div>
@@ -32,7 +33,7 @@
         </div>
         <div class="cta-row" style="margin-top:14px;"><button class="btn btn-primary" type="submit">Run Pre-Flight</button><a class="btn btn-secondary" href="/tools/book-call/" data-track-url data-utm-content="preflight-book-call">Route for Review</a></div>
       </form>
-      <article class="card"><h2>Output</h2><pre class="output-box" id="preflight-output">Run the checklist to generate a broker-safe routing signal.</pre></article>
+      <article class="card"><h2>Output</h2><pre class="output-box" id="preflight-output">Run the checklist to generate a broker-safe routing signal with suggested lane and caution flags.</pre></article>
     </section>
     <section class="container section-shell grid-3"><article class="card"><h2>possible fit</h2><p>Core markers are present with a clear document path.</p></article><article class="card"><h2>review needed</h2><p>Missing details or caution flags should be clarified before routing.</p></article><article class="card"><h2>route for review</h2><p>Manual review should happen before any recommendation language is used.</p></article></section>
   </main>
