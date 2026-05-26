@@ -27,8 +27,8 @@
           <div class="form-group"><label class="form-label" for="partnerType">Partner Type</label><input class="form-input" id="partnerType" name="partnerType" value="Referral Partner"></div>
           <div class="form-group"><label class="form-label" for="campaignSource">Campaign Source</label><input class="form-input" id="campaignSource" name="campaignSource" value="partner"></div>
           <div class="form-group"><label class="form-label" for="campaignContent">Default Content</label><input class="form-input" id="campaignContent" name="campaignContent" value="email-blast"></div>
-          <div class="form-group"><label class="form-label" for="fundingTypePage">Funding Type Page</label><input class="form-input" id="fundingTypePage" name="fundingTypePage" value="/funding/working-capital/"></div>
-          <div class="form-group"><label class="form-label" for="verticalPage">Vertical Page</label><input class="form-input" id="verticalPage" name="verticalPage" value="/verticals/trades-contractors/"></div>
+          <div class="form-group"><label class="form-label" for="fundingTypePage">Funding Type Page</label><select class="form-input" id="fundingTypePage" name="fundingTypePage"><option value="/funding/working-capital/">/funding/working-capital/</option></select></div>
+          <div class="form-group"><label class="form-label" for="verticalPage">Vertical Page</label><select class="form-input" id="verticalPage" name="verticalPage"><option value="/verticals/cpas/">/verticals/cpas/</option></select></div>
           <div class="form-group"><label class="form-label" for="targetPage">Custom Target Page</label><input class="form-input" id="targetPage" name="targetPage" value="/funding/working-capital/"></div>
         </div>
         <div class="cta-row" style="margin-top:14px;">
@@ -42,6 +42,8 @@
   </main>
 
   <script src="/data/config.js"></script>
+  <script src="/data/funding-types.js"></script>
+  <script src="/data/verticals.js"></script>
   <script src="/assets/js/tracking.js"></script>
   <script src="/assets/js/link-builder.js"></script>
 </body>

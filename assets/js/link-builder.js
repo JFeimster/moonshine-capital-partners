@@ -19,7 +19,7 @@
       ref,
       partner: slug,
       partner_name: name,
-      partner_type: input.partnerType || "Partner",
+      partner_type: (input.partnerType || "Partner").trim(),
       utm_source: source,
       utm_medium: "referral",
       utm_campaign: slug,
@@ -59,14 +59,32 @@
       .map(([label, url, content]) => {
         const tracked = trackedUrl(url, buildParams(input, content));
         const absolute = tracked.startsWith("http") ? tracked : `${baseUrl}${tracked}`;
-        return `${label}: ${absolute}`;
+        return `${label}:\n${absolute}`;
       })
-      .join("\n");
+      .join("\n\n");
+  }
+
+  function hydrateSelectOptions() {
+    const fundingTypePage = document.getElementById("fundingTypePage");
+    const verticalPage = document.getElementById("verticalPage");
+
+    if (fundingTypePage?.tagName === "SELECT" && Array.isArray(window.fundingTypes)) {
+      fundingTypePage.innerHTML = window.fundingTypes
+        .map((item) => `<option value="/funding/${item.slug}/">${item.publicName}</option>`)
+        .join("");
+    }
+
+    if (verticalPage?.tagName === "SELECT" && Array.isArray(window.verticalsData)) {
+      verticalPage.innerHTML = window.verticalsData
+        .map((item) => `<option value="/verticals/${item.slug}/">${item.name}</option>`)
+        .join("");
+    }
   }
 
   document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("link-builder-form");
     if (!form) return;
+    hydrateSelectOptions();
     const output = document.getElementById("link-builder-output");
     const copy = document.getElementById("copy-link-builder-output");
 

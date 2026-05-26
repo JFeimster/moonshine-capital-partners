@@ -10,6 +10,8 @@
   }
 
   function buildWidgetCode(data) {
+    const config = window.moonshineConfig || {};
+    const getFundedTarget = `https://tally.so/r/${config.tallyFormId || "YOUR_TALLY_FORM_ID"}`;
     const targetMap = {
       scorecard: {
         path: "/tools/funding-readiness-scorecard/",
@@ -17,7 +19,7 @@
         defaultHeight: "760"
       },
       getFunded: {
-        path: "/tools/embeds/get-funded-form.html",
+        path: getFundedTarget,
         title: "Moonshine Capital Get Funded Form",
         defaultHeight: "820"
       },
@@ -36,7 +38,7 @@
     const selected = targetMap[data.targetTool] || targetMap.scorecard;
     const width = data.width || "100%";
     const height = data.height || selected.defaultHeight;
-    const baseUrl = (window.moonshineConfig || {}).baseUrl || DEFAULT_BASE_URL;
+    const baseUrl = config.baseUrl || DEFAULT_BASE_URL;
     const relativeSrc = window.mergeTrackingParams
       ? window.mergeTrackingParams(selected.path, {
           ref: data.referralCode || "DIRECT",

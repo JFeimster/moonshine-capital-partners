@@ -24,18 +24,26 @@
     <section class="container section-shell grid-2">
       <article class="form-shell">
         <h2>Choose funding type</h2>
-        <div class="form-group"><label class="form-label" for="fundingType">Funding Type</label><select class="form-input" id="fundingType"><option value="workingCapital">Working capital / revenue-based funding</option><option value="lineOfCredit">Business line of credit</option><option value="equipment">Equipment financing</option><option value="invoiceFactoring">Invoice factoring / receivables</option><option value="realEstate">Real estate investor funding</option></select></div>
+        <div class="form-group"><label class="form-label" for="fundingType">Funding Type</label><select class="form-input" id="fundingType"><option value="working-capital">Moonshine Capital Revenue Advance Program</option></select></div>
         <p id="document-checklist-summary" class="fine-print"></p>
       </article>
       <article class="card">
         <h2>Checklist output</h2>
-        <ul class="info-list" id="document-checklist-output"></ul>
+        <h3>Typical documents</h3>
+        <ul class="info-list" id="document-checklist-documents"></ul>
+        <h3>Readiness markers</h3>
+        <ul class="info-list" id="document-checklist-readiness"></ul>
+        <h3>Caution flags</h3>
+        <ul class="info-list" id="document-checklist-cautions"></ul>
+        <h3>Prep checklist</h3>
+        <ul class="info-list" id="document-checklist-prep"></ul>
       </article>
     </section>
-    <section class="container section-shell"><article class="card"><h2>Next Step</h2><p>Once the checklist is organized, continue to the funding-readiness scorecard or route the file for review. Requirements can change by product and review path.</p><div class="cta-row"><a class="btn btn-primary" href="/tools/funding-readiness-scorecard/" data-track-url data-utm-content="checklist-scorecard">Open Scorecard</a><a class="btn btn-secondary" href="/tools/book-call/" data-track-url data-utm-content="checklist-book-call">Book Call</a></div></article></section>
+    <section class="container section-shell"><article class="card"><h2>Next Step</h2><p>Once the checklist is organized, continue to readiness scoring or route the file for review. Requirements can change by product and review path.</p><div class="cta-row"><a class="btn btn-primary" id="document-checklist-get-funded" href="/tools/embeds/get-funded-form.html" data-track-url data-utm-content="checklist-get-funded">Get Funded</a><a class="btn btn-secondary" href="/tools/funding-readiness-scorecard/" data-track-url data-utm-content="checklist-scorecard">Open Scorecard</a></div></article></section>
   </main>
   <footer class="site-footer"><div class="container footer-safe"><p id="funding-disclaimer"></p><p id="referral-disclosure"></p></div></footer>
   <script src="/data/config.js"></script>
+  <script src="/data/funding-types.js"></script>
   <script src="/assets/js/tracking.js"></script>
   <script src="/assets/js/document-checklist.js"></script>
   <script>document.getElementById('funding-disclaimer').textContent=(window.moonshineConfig||{}).requiredFundingDisclaimer||'';document.getElementById('referral-disclosure').textContent=(window.moonshineConfig||{}).requiredReferralDisclosure||'';</script>
