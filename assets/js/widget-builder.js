@@ -18,6 +18,11 @@
         title: "Moonshine Capital Funding Readiness Scorecard",
         defaultHeight: "760"
       },
+      fieEngine: {
+        path: "/tools/funding-intelligence-engine/",
+        title: "Moonshine Capital Funding Intelligence Engine",
+        defaultHeight: "980"
+      },
       getFunded: {
         path: getFundedTarget,
         title: "Moonshine Capital Get Funded Form",
