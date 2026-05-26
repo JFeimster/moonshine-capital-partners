@@ -1,1 +1,45 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Broker Pre-Flight Checklist | Moonshine Capital</title><meta name="description" content="Checklist for brokers to evaluate possible fit before routing deals for review."><meta property="og:title" content="Broker Pre-Flight Checklist"><meta property="og:description" content="possible fit, review needed, and route for review checklist."><link rel="canonical" href="https://moonshine-capital-partners.vercel.app/brokers/pre-flight/"><link rel="stylesheet" href="/assets/css/global.css"><link rel="stylesheet" href="/assets/css/tools.css"><link rel="stylesheet" href="/assets/css/compliance.css"></head><body><a class="skip-link" href="#main-content">Skip to content</a><header class="sticky-header"><div class="container header-inner"><div class="logo-container"><div class="logo-symbol">M</div><div class="logo-text">MOONSHINE<span>CAPITAL</span></div></div></div></header><main id="main-content" class="section-shell"><section class="container"><h1>Broker Pre-Flight Checklist</h1><p>Use this static checklist to evaluate possible fit before routing a file.</p></section><section class="container section-shell"><article class="form-shell"><h2>Checklist</h2><ul class="info-list"><li>business type</li><li>monthly revenue</li><li>time in business</li><li>credit tier</li><li>urgency</li><li>use of funds</li><li>existing advances</li><li>recent NSFs</li><li>bankruptcies</li><li>tax liens</li><li>document readiness</li><li>collateral or asset story if relevant</li><li>recommended Moonshine funding lane</li></ul></article></section><section class="container section-shell grid-2"><article class="card"><h2>possible fit</h2><p>Core markers present with a clear documentation path.</p></article><article class="card"><h2>review needed</h2><p>Missing details or caution flags should be clarified before routing.</p></article></section><section class="container section-shell"><article class="card"><h2>route for review</h2><a class="btn btn-primary" href="/tools/book-call/" data-track-url data-utm-content="preflight-route">Route for Review</a></article></section></main><footer class="site-footer"><div class="container footer-safe"><p id="funding-disclaimer"></p><p id="referral-disclosure"></p></div></footer><script src="/assets/js/tracking.js"></script><script src="/data/config.js"></script><script>document.getElementById('funding-disclaimer').textContent=(window.moonshineConfig||{}).requiredFundingDisclaimer||'';document.getElementById('referral-disclosure').textContent=(window.moonshineConfig||{}).requiredReferralDisclosure||'';</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Broker Pre-Flight Checklist | Moonshine Capital</title>
+  <meta name="description" content="Checklist for brokers to evaluate possible fit before routing deals for review.">
+  <meta property="og:title" content="Broker Pre-Flight Checklist">
+  <meta property="og:description" content="Possible fit, review needed, and route for review checklist.">
+  <link rel="canonical" href="https://moonshine-capital-partners.vercel.app/brokers/pre-flight/">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/assets/css/tools.css">
+  <link rel="stylesheet" href="/assets/css/compliance.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="sticky-header"><div class="container header-inner"><div class="logo-container"><div class="logo-symbol">M</div><div class="logo-text">MOONSHINE<span>CAPITAL</span></div></div></div></header>
+  <main id="main-content" class="section-shell">
+    <section class="container"><h1>Broker Pre-Flight Checklist</h1><p>Use this static checklist to triage a file before routing. Output language is intentionally limited to possible fit, review needed, or route for review.</p></section>
+    <section class="container section-shell grid-2">
+      <form id="preflight-form" class="form-shell">
+        <h2>Deal snapshot</h2>
+        <div class="form-grid">
+          <div class="form-group"><label class="form-label" for="monthlyRevenue">Monthly Revenue Estimate</label><input class="form-input" id="monthlyRevenue" name="monthlyRevenue" type="number" value="25000"></div>
+          <div class="form-group"><label class="form-label" for="timeInBusiness">Time in Business (months)</label><input class="form-input" id="timeInBusiness" name="timeInBusiness" type="number" value="18"></div>
+          <div class="form-group"><label class="form-label" for="bankStatements">Bank Statements Ready?</label><select class="form-input" id="bankStatements" name="bankStatements"><option value="yes">yes</option><option value="no">no</option></select></div>
+          <div class="form-group"><label class="form-label" for="existingAdvances">Existing Advances</label><select class="form-input" id="existingAdvances" name="existingAdvances"><option value="none">none</option><option value="one">one</option><option value="multiple">multiple</option></select></div>
+          <div class="form-group"><label class="form-label" for="recentNsfs">Recent NSFs?</label><select class="form-input" id="recentNsfs" name="recentNsfs"><option value="no">no</option><option value="yes">yes</option></select></div>
+          <div class="form-group"><label class="form-label" for="taxLiens">Tax Liens?</label><select class="form-input" id="taxLiens" name="taxLiens"><option value="no">no</option><option value="yes">yes</option></select></div>
+          <div class="form-group"><label class="form-label" for="bankruptcy">Open/Recent Bankruptcy?</label><select class="form-input" id="bankruptcy" name="bankruptcy"><option value="no">no</option><option value="yes">yes</option></select></div>
+          <div class="form-group"><label class="form-label" for="industryRisk">Restricted/High-Review Industry?</label><select class="form-input" id="industryRisk" name="industryRisk"><option value="no">no</option><option value="yes">yes</option></select></div>
+        </div>
+        <div class="cta-row" style="margin-top:14px;"><button class="btn btn-primary" type="submit">Run Pre-Flight</button><a class="btn btn-secondary" href="/tools/book-call/" data-track-url data-utm-content="preflight-book-call">Route for Review</a></div>
+      </form>
+      <article class="card"><h2>Output</h2><pre class="output-box" id="preflight-output">Run the checklist to generate a broker-safe routing signal.</pre></article>
+    </section>
+    <section class="container section-shell grid-3"><article class="card"><h2>possible fit</h2><p>Core markers are present with a clear document path.</p></article><article class="card"><h2>review needed</h2><p>Missing details or caution flags should be clarified before routing.</p></article><article class="card"><h2>route for review</h2><p>Manual review should happen before any recommendation language is used.</p></article></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-safe"><p id="funding-disclaimer"></p><p id="referral-disclosure"></p></div></footer>
+  <script src="/data/config.js"></script>
+  <script src="/assets/js/tracking.js"></script>
+  <script src="/assets/js/broker-preflight.js"></script>
+  <script>document.getElementById('funding-disclaimer').textContent=(window.moonshineConfig||{}).requiredFundingDisclaimer||'';document.getElementById('referral-disclosure').textContent=(window.moonshineConfig||{}).requiredReferralDisclosure||'';</script>
+</body>
+</html>

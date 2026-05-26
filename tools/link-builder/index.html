@@ -18,15 +18,18 @@
   <main id="main-content" class="section-shell">
     <section class="container">
       <h1>Referral Link Builder</h1>
-      <p>Build clean tracked links for partners, funding pages, tools, and vertical routes.</p>
+      <p>Build clean tracked links for partner pages, Get Funded, scorecards, funding pages, vertical pages, document checklists, and book-call pages.</p>
       <form id="link-builder-form" class="form-shell">
         <div class="form-grid">
           <div class="form-group"><label class="form-label" for="partnerName">Partner Name</label><input class="form-input" id="partnerName" name="partnerName" value="Jane Smith"></div>
           <div class="form-group"><label class="form-label" for="partnerSlug">Partner Slug</label><input class="form-input" id="partnerSlug" name="partnerSlug" value="jane-smith"></div>
           <div class="form-group"><label class="form-label" for="referralCode">Referral Code</label><input class="form-input" id="referralCode" name="referralCode" value="JANE2026"></div>
+          <div class="form-group"><label class="form-label" for="partnerType">Partner Type</label><input class="form-input" id="partnerType" name="partnerType" value="Referral Partner"></div>
           <div class="form-group"><label class="form-label" for="campaignSource">Campaign Source</label><input class="form-input" id="campaignSource" name="campaignSource" value="partner"></div>
-          <div class="form-group"><label class="form-label" for="campaignContent">Campaign Content</label><input class="form-input" id="campaignContent" name="campaignContent" value="email-blast"></div>
-          <div class="form-group"><label class="form-label" for="targetPage">Target Page</label><input class="form-input" id="targetPage" name="targetPage" value="/funding/working-capital/"></div>
+          <div class="form-group"><label class="form-label" for="campaignContent">Default Content</label><input class="form-input" id="campaignContent" name="campaignContent" value="email-blast"></div>
+          <div class="form-group"><label class="form-label" for="fundingTypePage">Funding Type Page</label><input class="form-input" id="fundingTypePage" name="fundingTypePage" value="/funding/working-capital/"></div>
+          <div class="form-group"><label class="form-label" for="verticalPage">Vertical Page</label><input class="form-input" id="verticalPage" name="verticalPage" value="/verticals/trades-contractors/"></div>
+          <div class="form-group"><label class="form-label" for="targetPage">Custom Target Page</label><input class="form-input" id="targetPage" name="targetPage" value="/funding/working-capital/"></div>
         </div>
         <div class="cta-row" style="margin-top:14px;">
           <button class="btn btn-primary" type="submit">Generate URLs</button>
@@ -34,6 +37,7 @@
         </div>
       </form>
       <pre class="output-box" id="link-builder-output">Generated links will appear here.</pre>
+      <article class="card" style="margin-top:18px;"><h2>Safe-use reminder</h2><p>Use tracked URLs for attribution and routing only. Do not frame any link as a funding approval, guaranteed offer, credit outcome, commission promise, or income claim.</p></article>
     </section>
   </main>
 

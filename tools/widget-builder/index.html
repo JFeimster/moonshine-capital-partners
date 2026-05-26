@@ -18,18 +18,20 @@
   <main id="main-content" class="section-shell">
     <section class="container">
       <h1>Widget Builder</h1>
-      <p>Generate copy-paste iframe code with partner attribution parameters.</p>
+      <p>Generate copy-paste iframe code with partner attribution parameters for the scorecard, Get Funded form, Book Call page, and Document Checklist.</p>
       <form id="widget-builder-form" class="form-shell">
         <div class="form-grid">
+          <div class="form-group"><label class="form-label" for="partnerName">Partner Name</label><input class="form-input" id="partnerName" name="partnerName" value="Jane Smith"></div>
           <div class="form-group"><label class="form-label" for="partnerSlug">Partner Slug</label><input class="form-input" id="partnerSlug" name="partnerSlug" value="jane-smith"></div>
           <div class="form-group"><label class="form-label" for="referralCode">Referral Code</label><input class="form-input" id="referralCode" name="referralCode" value="JANE2026"></div>
+          <div class="form-group"><label class="form-label" for="partnerType">Partner Type</label><input class="form-input" id="partnerType" name="partnerType" value="Referral Partner"></div>
           <div class="form-group"><label class="form-label" for="width">Width</label><input class="form-input" id="width" name="width" value="100%"></div>
-          <div class="form-group"><label class="form-label" for="height">Height</label><input class="form-input" id="height" name="height" value="700"></div>
-          <div class="form-group"><label class="form-label" for="theme">Theme</label><input class="form-input" id="theme" name="theme" value="neo-brutalist"></div>
+          <div class="form-group"><label class="form-label" for="height">Height</label><input class="form-input" id="height" name="height" placeholder="Optional"></div>
+          <div class="form-group"><label class="form-label" for="theme">Theme</label><input class="form-input" id="theme" name="theme" value="moonshine-dark"></div>
           <div class="form-group"><label class="form-label" for="targetTool">Target Tool</label>
             <select class="form-input" id="targetTool" name="targetTool">
               <option value="scorecard">Funding Readiness Scorecard</option>
-              <option value="getFunded">Get Funded Tally Form</option>
+              <option value="getFunded">Get Funded Form</option>
               <option value="bookCall">Book Call Page</option>
               <option value="checklist">Document Checklist</option>
             </select>
@@ -41,6 +43,7 @@
         </div>
       </form>
       <pre class="output-box" id="widget-builder-output">Generated iframe code will appear here.</pre>
+      <article class="card" style="margin-top:18px;"><h2>Embed guardrail</h2><p>Partner widgets preserve attribution. They do not create funding decisions, approvals, credit outcomes, guaranteed compensation, or guaranteed results.</p></article>
     </section>
   </main>
 
